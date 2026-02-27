@@ -1,0 +1,28 @@
+﻿--- All Button-like Tags ---
+Tag: <button>, Label: '설정'
+Tag: <button>, Label: '노트북 만들기'
+Tag: <button>, Label: ''
+Tag: <button>, Label: '노트북 공유'
+Tag: <button>, Label: '노트북 구성'
+Tag: <button>, Label: '채팅 옵션'
+Tag: <button>, Label: '업로드 소스 대화상자 열기'
+Tag: <button>, Label: '채팅 패널을 하단으로 스크롤'
+Tag: <button>, Label: '제출'
+Tag: <button>, Label: '제출'
+Tag: <button>, Label: '닫기'
+
+--- Potential Text Labels ---
+Text found: '내 소스를 기반으로 AI 대화형 퀴즈를 생성합니다.'
+Text found: '내 소스를 기반으로 AI 마인드맵을 생성합니다.'
+Text found: '내 소스를 기반으로 AI 슬라이드 자료를 생성합니다.'
+Text found: '내 소스를 기반으로 AI 인포그래픽을 생성합니다.'
+Text found: '내 소스를 기반으로 AI 팟캐스트를 생성합니다.'
+Text found: '내 소스를 기반으로 AI 플래시카드를 생성합니다.'
+Text found: '또는 파일 드롭'
+Text found: '소스 업로드'
+Text found: '소스를 기반으로 보고서 생성'
+Text found: '소스에서 데이터 표 생성'
+Text found: '시작하려면 소스 추가'
+Text found: '파일 업로드'
+
+--- All Inputs ---

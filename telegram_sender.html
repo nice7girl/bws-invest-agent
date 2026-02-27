@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BWS_Invest Telegram 전송 대시보드</title>
+    <style>
+        :root {
+            --primary: #0088cc;
+            --bg: #f5f7f9;
+            --card: #ffffff;
+            --text: #333;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+        }
+
+        h1 {
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .info {
+            background: #e1f5fe;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        textarea {
+            height: 200px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #0077b5;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        #status {
+            margin-top: 1rem;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .error {
+            color: #d32f2f;
+        }
+
+        .success {
+            color: #388e3c;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🚀 Telegram 전송 대시보드</h1>
+        <div class="info">
+            💡 <strong>사내망 우회 가이드:</strong><br>
+            터미널에서 전송이 막히는 경우, 브라우저의 프록시 설정을 사용하여 전송할 수 있습니다.
+            아래 전송 버튼을 누르면 브라우저가 직접 텔레그램 API로 리포트를 보냅니다.
+        </div>
+
+        <div class="form-group">
+            <label for="token">Bot Token</label>
+            <input type="text" id="token" value="8589073083:AAHXqx9o5SZXciMxYKXbeKhwXQFWLW6X20s">
+        </div>
+
+        <div class="form-group">
+            <label for="chatId">Chat ID</label>
+            <input type="text" id="chatId" value="7022508795">
+        </div>
+
+        <div class="form-group">
+            <label for="message">메시지 내용</label>
+            <textarea id="message">☀️ **오늘의 모닝 투자 인사이트**
+
+**시간대:** AM
+**작성일:** 2024년 2월 27일 (목요일 기사 내용 기반)
+
+---
+
+### **국내 시장 요약**
+
+코스피 지수는 단기간 내 5천에서 6천으로 급등하며 사상 처음으로 시가총액 5,000조 원을 돌파, 세계 9위 시장으로 안착했습니다. 작년 76% 상승에 이어 올해 벌써 44%의 상승률을 기록하며 과거의 코리아 디스카운트 해소 기대감이 커지고 있습니다.
+
+**주요 상승 동력:**
+1. **개인 투자자 주도:** 5천 돌파 이후 개인 투자자들이 코스피 및 ETF 포함 총 19.23조 원 순매수하며 6천 달성의 주역으로 부상했습니다. 은행 요구불/정기예금에서 25조 원 이상 이탈하여 증시로 유입되었고, 신용거래융자 및 투자자 예탁금은 연일 사상 최대치를 경신하고 있습니다.
+2. **ETF 시장 급성장:** 국내 주식형 ETF 순자산이 해외 주식형을 50조 원 이상 앞지르며(158조 원 vs 101조 원) 시장 판도를 바꿨습니다. 개인 투자자들이 개별 주식(R주식)은 매도하고 ETF를 통해 분산 투자(순매수 25조 원 이상)하는 경향이 뚜렷합니다.
+
+(이하 보고서 원문 참조...)</textarea>
+        </div>
+
+        <button id="sendBtn">텔레그램으로 전송하기</button>
+        <div id="status"></div>
+    </div>
+
+    <script>
+        const sendBtn = document.getElementById('sendBtn');
+        const statusDiv = document.getElementById('status');
+
+        // 메시지 전송 함수
+        async function sendMessage() {
+            const token = document.getElementById('token').value;
+            const chatId = document.getElementById('chatId').value;
+            const text = document.getElementById('message').value;
+
+            sendBtn.disabled = true;
+            statusDiv.textContent = '⏱ 전송 중...';
+            statusDiv.className = '';
+
+            try {
+                const response = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: text,
+                        parse_mode: 'Markdown'
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.ok) {
+                    statusDiv.textContent = '✅ 전송 성공!';
+                    statusDiv.className = 'success';
+                } else {
+                    statusDiv.textContent = `❌ 실패: ${result.description}`;
+                    statusDiv.className = 'error';
+                }
+            } catch (error) {
+                statusDiv.textContent = `❌ 네트워크 오류: ${error.message}`;
+                statusDiv.className = 'error';
+                console.error(error);
+            } finally {
+                sendBtn.disabled = false;
+            }
+        }
+
+        sendBtn.addEventListener('click', sendMessage);
+    </script>
+</body>
+
+</html>

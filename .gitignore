@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+tmp/
+data/processed_reports.txt
+output/reports/*.md
+output/scripts/*.md
+
+# Note: Keeping output directories themselves but ignoring their dynamic contents.
+!output/reports/.gitkeep
+!output/scripts/.gitkeep
+
+# Ignore configuration files with secrets
+config.json

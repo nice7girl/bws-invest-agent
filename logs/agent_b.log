@@ -1,0 +1,611 @@
+[2026-02-26 16:21:05] Starting Agent B for AM...
+[2026-02-26 16:21:06] Found video ID: OxnIz02VlH4 (Attempt 1)
+[2026-02-26 16:21:06] Error fetching transcript for OxnIz02VlH4: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript'
+[2026-02-26 16:21:06] Failed to extract transcript for OxnIz02VlH4.
+[2026-02-26 16:21:06] Waiting 5 minutes before retry...
+[2026-02-26 16:26:08] Found video ID: OxnIz02VlH4 (Attempt 2)
+[2026-02-26 16:26:08] Error fetching transcript for OxnIz02VlH4: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript'
+[2026-02-26 16:26:08] Failed to extract transcript for OxnIz02VlH4.
+[2026-02-26 16:26:08] Waiting 5 minutes before retry...
+[2026-02-26 16:31:09] Found video ID: OxnIz02VlH4 (Attempt 3)
+[2026-02-26 16:31:09] Error fetching transcript for OxnIz02VlH4: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript'
+[2026-02-26 16:31:09] Failed to extract transcript for OxnIz02VlH4.
+[2026-02-26 16:31:09] 당일 [AM] 업데이트 없음
+[2026-02-26 16:31:12] Starting Agent B for AM...
+[2026-02-26 16:31:14] Found video ID: OxnIz02VlH4 (Attempt 1)
+[2026-02-26 16:31:14] Error fetching transcript for OxnIz02VlH4: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript'
+[2026-02-26 16:31:14] Failed to extract transcript for OxnIz02VlH4.
+[2026-02-26 16:31:14] Waiting 5 minutes before retry...
+[2026-02-26 16:34:07] Starting Agent B for AM...
+[2026-02-26 16:34:08] Found video ID: OxnIz02VlH4 (Attempt 1)
+[2026-02-26 16:34:08] Error fetching transcript for OxnIz02VlH4: type object 'YouTubeTranscriptApi' has no attribute 'list_transcripts'
+[2026-02-26 16:34:08] Failed to extract transcript for OxnIz02VlH4.
+[2026-02-26 16:34:08] Waiting 5 minutes before retry...
+[2026-02-26 16:39:10] Found video ID: OxnIz02VlH4 (Attempt 2)
+[2026-02-26 16:39:10] Error fetching transcript for OxnIz02VlH4: type object 'YouTubeTranscriptApi' has no attribute 'list_transcripts'
+[2026-02-26 16:39:10] Failed to extract transcript for OxnIz02VlH4.
+[2026-02-26 16:39:10] Waiting 5 minutes before retry...
+[2026-02-26 16:44:11] Found video ID: OxnIz02VlH4 (Attempt 3)
+[2026-02-26 16:44:11] Error fetching transcript for OxnIz02VlH4: type object 'YouTubeTranscriptApi' has no attribute 'list_transcripts'
+[2026-02-26 16:44:11] Failed to extract transcript for OxnIz02VlH4.
+[2026-02-26 16:44:11] 당일 [AM] 업데이트 없음
+[2026-02-26 16:47:04] Starting Agent B for AM...
+[2026-02-26 16:47:06] Found video ID: OxnIz02VlH4 (Attempt 1)
+[2026-02-26 16:47:08] Error fetching transcript for OxnIz02VlH4: 'FetchedTranscriptSnippet' object is not subscriptable
+[2026-02-26 16:47:08] Failed to extract transcript for OxnIz02VlH4.
+[2026-02-26 16:47:08] Waiting 5 minutes before retry...
+[2026-02-26 16:48:03] Starting Agent B for AM...
+[2026-02-26 16:48:04] Found video ID: OxnIz02VlH4 (Attempt 1)
+[2026-02-26 16:48:06] Error fetching transcript for OxnIz02VlH4: 'FetchedTranscriptSnippet' object is not subscriptable
+[2026-02-26 16:48:06] Failed to extract transcript for OxnIz02VlH4.
+[2026-02-26 16:48:06] Waiting 5 minutes before retry...
+[2026-02-26 16:49:27] Starting Agent B for AM...
+[2026-02-26 16:49:28] Found video ID: OxnIz02VlH4 (Attempt 1)
+[2026-02-26 16:49:31] Error during Gemini analysis: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+[2026-02-26 16:49:31] Waiting 5 minutes before retry...
+[2026-02-26 16:49:55] Starting Agent B for AM...
+[2026-02-26 16:49:56] Found video ID: OxnIz02VlH4 (Attempt 1)
+[2026-02-26 16:49:58] Error during Gemini analysis: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[2026-02-26 16:49:58] Waiting 5 minutes before retry...
+[2026-02-26 16:50:34] Starting Agent B for AM...
+[2026-02-26 16:50:35] Found video ID: OxnIz02VlH4 (Attempt 1)
+[2026-02-26 16:50:37] Error during Gemini analysis: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+Please retry in 22.181949262s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 22
+}
+]
+[2026-02-26 16:50:37] Waiting 5 minutes before retry...
+[2026-02-26 16:51:15] Starting Agent B for AM...
+[2026-02-26 16:51:17] Found video ID: OxnIz02VlH4 (Attempt 1)
+[2026-02-26 16:51:19] Error during Gemini analysis: 404 models/gemini-1.5-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[2026-02-26 16:51:19] Waiting 30 seconds before retry...
+[2026-02-26 16:51:51] Found video ID: OxnIz02VlH4 (Attempt 2)
+[2026-02-26 16:51:53] Error during Gemini analysis: 404 models/gemini-1.5-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[2026-02-26 16:51:53] Waiting 30 seconds before retry...
+[2026-02-26 16:52:05] Starting Agent B for AM...
+[2026-02-26 16:52:06] Found video ID: OxnIz02VlH4 (Attempt 1)
+[2026-02-26 16:52:35] Report saved to output\20260226_AM_분석보고서.md
+[2026-02-26 16:54:45] Starting Agent B for AM...
+[2026-02-26 16:54:46] Found video ID: OxnIz02VlH4 (Attempt 1)
+[2026-02-26 16:54:48] Error during Gemini analysis: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash-lite
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite
+Please retry in 11.196348338s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash-lite"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash-lite"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash-lite"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 11
+}
+]
+[2026-02-26 16:54:48] Waiting 30 seconds before retry...
+[2026-02-26 16:55:20] Found video ID: OxnIz02VlH4 (Attempt 2)
+[2026-02-26 16:55:22] Error during Gemini analysis: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash-lite
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite
+Please retry in 37.814968963s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash-lite"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash-lite"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash-lite"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 37
+}
+]
+[2026-02-26 16:55:22] Waiting 30 seconds before retry...
+[2026-02-26 16:55:53] Found video ID: OxnIz02VlH4 (Attempt 3)
+[2026-02-26 16:55:56] Error during Gemini analysis: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash-lite
+Please retry in 3.544082601s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash-lite"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash-lite"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash-lite"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 3
+}
+]
+[2026-02-26 16:55:56] 당일 [AM] 업데이트 없음
+[2026-02-26 17:50:18] Starting Agent B for PM...
+[2026-02-26 17:50:19] Found video ID: LKBgw9OApr4 (Attempt 1)
+[2026-02-26 17:50:20] Error fetching transcript for LKBgw9OApr4: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=LKBgw9OApr4! This is most likely caused by:
+
+Subtitles are disabled for this video
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+[2026-02-26 17:50:20] Failed to extract transcript for LKBgw9OApr4.
+[2026-02-26 17:50:20] Waiting 30 seconds before retry...
+[2026-02-26 17:50:51] Found video ID: LKBgw9OApr4 (Attempt 2)
+[2026-02-26 17:50:52] Error fetching transcript for LKBgw9OApr4: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=LKBgw9OApr4! This is most likely caused by:
+
+Subtitles are disabled for this video
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+[2026-02-26 17:50:52] Failed to extract transcript for LKBgw9OApr4.
+[2026-02-26 17:50:52] Waiting 30 seconds before retry...
+[2026-02-26 17:51:23] Found video ID: LKBgw9OApr4 (Attempt 3)
+[2026-02-26 17:51:25] Error fetching transcript for LKBgw9OApr4: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=LKBgw9OApr4! This is most likely caused by:
+
+Subtitles are disabled for this video
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+[2026-02-26 17:51:25] Failed to extract transcript for LKBgw9OApr4.
+[2026-02-26 17:51:25] 당일 [PM] 업데이트 없음
+[2026-02-27 03:39:53] Starting Agent B for AM...
+[2026-02-27 03:39:54] Found video ID: Vh_oryZm48g (Attempt 1)
+[2026-02-27 03:39:54] Error fetching transcript for Vh_oryZm48g: type object 'YouTubeTranscriptApi' has no attribute 'list_transcripts'
+[2026-02-27 03:39:54] Failed to extract transcript for Vh_oryZm48g.
+[2026-02-27 03:39:54] Waiting 30 seconds before retry...
+[2026-02-27 03:40:25] Found video ID: Vh_oryZm48g (Attempt 2)
+[2026-02-27 03:40:25] Error fetching transcript for Vh_oryZm48g: type object 'YouTubeTranscriptApi' has no attribute 'list_transcripts'
+[2026-02-27 03:40:25] Failed to extract transcript for Vh_oryZm48g.
+[2026-02-27 03:40:25] Waiting 30 seconds before retry...
+[2026-02-27 03:40:57] Found video ID: Vh_oryZm48g (Attempt 3)
+[2026-02-27 03:40:57] Error fetching transcript for Vh_oryZm48g: type object 'YouTubeTranscriptApi' has no attribute 'list_transcripts'
+[2026-02-27 03:40:57] Failed to extract transcript for Vh_oryZm48g.
+[2026-02-27 03:40:57] 당일 [AM] 업데이트 없음
+[2026-02-27 07:49:57] Starting Agent B for AM...
+[2026-02-27 07:49:58] Found video ID: Vh_oryZm48g (Attempt 1)
+[2026-02-27 07:49:58] Error fetching transcript for Vh_oryZm48g: type object 'YouTubeTranscriptApi' has no attribute 'list_transcripts'
+[2026-02-27 07:49:58] Failed to extract transcript for Vh_oryZm48g.
+[2026-02-27 07:49:58] Waiting 30 seconds before retry...
+[2026-02-27 07:50:29] Found video ID: Vh_oryZm48g (Attempt 2)
+[2026-02-27 07:50:29] Error fetching transcript for Vh_oryZm48g: type object 'YouTubeTranscriptApi' has no attribute 'list_transcripts'
+[2026-02-27 07:50:29] Failed to extract transcript for Vh_oryZm48g.
+[2026-02-27 07:50:29] Waiting 30 seconds before retry...
+[2026-02-27 07:51:00] Found video ID: Vh_oryZm48g (Attempt 3)
+[2026-02-27 07:51:00] Error fetching transcript for Vh_oryZm48g: type object 'YouTubeTranscriptApi' has no attribute 'list_transcripts'
+[2026-02-27 07:51:00] Failed to extract transcript for Vh_oryZm48g.
+[2026-02-27 07:51:00] 당일 [AM] 업데이트 없음
+[2026-02-27 07:51:12] Starting Agent B for AM...
+[2026-02-27 07:51:13] Found video ID: Vh_oryZm48g (Attempt 1)
+[2026-02-27 07:51:13] list_transcripts not found on class, trying instance method...
+[2026-02-27 07:51:13] Error fetching transcript for Vh_oryZm48g: 'YouTubeTranscriptApi' object has no attribute 'list_transcripts'
+[2026-02-27 07:51:13] Final fallback failed: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript'
+[2026-02-27 07:51:13] Failed to extract transcript for Vh_oryZm48g.
+[2026-02-27 07:51:13] Waiting 30 seconds before retry...
+[2026-02-27 07:51:43] Found video ID: Vh_oryZm48g (Attempt 2)
+[2026-02-27 07:51:43] list_transcripts not found on class, trying instance method...
+[2026-02-27 07:51:43] Error fetching transcript for Vh_oryZm48g: 'YouTubeTranscriptApi' object has no attribute 'list_transcripts'
+[2026-02-27 07:51:43] Final fallback failed: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript'
+[2026-02-27 07:51:43] Failed to extract transcript for Vh_oryZm48g.
+[2026-02-27 07:51:43] Waiting 30 seconds before retry...
+[2026-02-27 07:52:14] Found video ID: Vh_oryZm48g (Attempt 3)
+[2026-02-27 07:52:14] list_transcripts not found on class, trying instance method...
+[2026-02-27 07:52:14] Error fetching transcript for Vh_oryZm48g: 'YouTubeTranscriptApi' object has no attribute 'list_transcripts'
+[2026-02-27 07:52:14] Final fallback failed: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript'
+[2026-02-27 07:52:14] Failed to extract transcript for Vh_oryZm48g.
+[2026-02-27 07:52:14] 당일 [AM] 업데이트 없음
+[2026-02-27 07:52:29] Starting Agent B for AM...
+[2026-02-27 07:52:30] Found video ID: Vh_oryZm48g (Attempt 1)
+[2026-02-27 07:52:31] Error fetching transcript for Vh_oryZm48g: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=Vh_oryZm48g! This is most likely caused by:
+
+The video is unplayable for the following reason: This live event will begin in 7 minutes.
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+[2026-02-27 07:52:31] Final fallback failed: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript'
+[2026-02-27 07:52:31] Failed to extract transcript for Vh_oryZm48g.
+[2026-02-27 07:52:31] Waiting 30 seconds before retry...
+[2026-02-27 07:53:02] Found video ID: Vh_oryZm48g (Attempt 2)
+[2026-02-27 07:53:03] Error fetching transcript for Vh_oryZm48g: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=Vh_oryZm48g! This is most likely caused by:
+
+The video is unplayable for the following reason: This live event will begin in 6 minutes.
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+[2026-02-27 07:53:03] Final fallback failed: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript'
+[2026-02-27 07:53:03] Failed to extract transcript for Vh_oryZm48g.
+[2026-02-27 07:53:03] Waiting 30 seconds before retry...
+[2026-02-27 07:53:34] Found video ID: Vh_oryZm48g (Attempt 3)
+[2026-02-27 07:53:35] Error fetching transcript for Vh_oryZm48g: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=Vh_oryZm48g! This is most likely caused by:
+
+The video is unplayable for the following reason: This live event will begin in 6 minutes.
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+[2026-02-27 07:53:35] Final fallback failed: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript'
+[2026-02-27 07:53:35] Failed to extract transcript for Vh_oryZm48g.
+[2026-02-27 07:53:35] 당일 [AM] 업데이트 없음
+[2026-02-27 08:56:37] Starting Agent B for AM...
+[2026-02-27 08:56:38] Found video ID: Vh_oryZm48g (Attempt 1)
+[2026-02-27 08:56:40] Error fetching transcript for Vh_oryZm48g: 'FetchedTranscriptSnippet' object is not subscriptable
+[2026-02-27 08:56:40] Final fallback failed: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript'
+[2026-02-27 08:56:40] Failed to extract transcript for Vh_oryZm48g.
+[2026-02-27 08:56:40] Waiting 30 seconds before retry...
+[2026-02-27 08:57:11] Found video ID: Vh_oryZm48g (Attempt 2)
+[2026-02-27 08:57:13] Error fetching transcript for Vh_oryZm48g: 'FetchedTranscriptSnippet' object is not subscriptable
+[2026-02-27 08:57:13] Final fallback failed: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript'
+[2026-02-27 08:57:13] Failed to extract transcript for Vh_oryZm48g.
+[2026-02-27 08:57:13] Waiting 30 seconds before retry...
+[2026-02-27 08:57:44] Found video ID: Vh_oryZm48g (Attempt 3)
+[2026-02-27 08:57:45] Error fetching transcript for Vh_oryZm48g: 'FetchedTranscriptSnippet' object is not subscriptable
+[2026-02-27 08:57:45] Final fallback failed: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript'
+[2026-02-27 08:57:45] Failed to extract transcript for Vh_oryZm48g.
+[2026-02-27 08:57:45] 당일 [AM] 업데이트 없음
+[2026-02-27 08:58:06] Starting Agent B for AM...
+[2026-02-27 08:58:07] Found video ID: Vh_oryZm48g (Attempt 1)
+[2026-02-27 08:58:09] Error during Gemini analysis: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[2026-02-27 08:58:09] Waiting 30 seconds before retry...
+[2026-02-27 08:58:40] Found video ID: Vh_oryZm48g (Attempt 2)
+[2026-02-27 08:58:42] Error during Gemini analysis: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[2026-02-27 08:58:42] Waiting 30 seconds before retry...
+[2026-02-27 08:59:13] Found video ID: Vh_oryZm48g (Attempt 3)
+[2026-02-27 08:59:15] Error during Gemini analysis: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[2026-02-27 08:59:15] 당일 [AM] 업데이트 없음
+[2026-02-27 08:59:41] Starting Agent B for AM...
+[2026-02-27 08:59:42] Found video ID: Vh_oryZm48g (Attempt 1)
+[2026-02-27 08:59:44] Error during Gemini analysis: 404 models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[2026-02-27 08:59:44] Waiting 30 seconds before retry...
+[2026-02-27 09:00:15] Found video ID: Vh_oryZm48g (Attempt 2)
+[2026-02-27 09:00:17] Error during Gemini analysis: 404 models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[2026-02-27 09:00:17] Waiting 30 seconds before retry...
+[2026-02-27 09:00:48] Found video ID: Vh_oryZm48g (Attempt 3)
+[2026-02-27 09:00:50] Error during Gemini analysis: 404 models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[2026-02-27 09:00:50] 당일 [AM] 업데이트 없음
+[2026-02-27 09:02:48] Starting Agent B for AM...
+[2026-02-27 09:02:49] Found video ID: Vh_oryZm48g (Attempt 1)
+[2026-02-27 09:02:52] Error during Gemini analysis: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+Please retry in 7.680288676s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 7
+}
+]
+[2026-02-27 09:02:52] Waiting 30 seconds before retry...
+[2026-02-27 09:03:24] Found video ID: Vh_oryZm48g (Attempt 2)
+[2026-02-27 09:03:26] Error during Gemini analysis: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 33.78143704s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 33
+}
+]
+[2026-02-27 09:03:26] Waiting 30 seconds before retry...
+[2026-02-27 09:03:58] Found video ID: Vh_oryZm48g (Attempt 3)
+[2026-02-27 09:03:59] Error during Gemini analysis: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+Please retry in 195.802773ms. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+}
+]
+[2026-02-27 09:03:59] 당일 [AM] 업데이트 없음
+[2026-02-27 09:05:04] Starting Agent B for AM...
+[2026-02-27 09:05:05] Found video ID: Vh_oryZm48g (Attempt 1)
+[2026-02-27 09:05:49] Report saved to output\reports\20260227_AM_분석보고서.md
+[2026-02-27 09:23:27] Starting Agent B for AM...
+[2026-02-27 09:23:29] Matched today's video: 한국경제신문 30분 만에 읽기 | 20260227🌞#모닝루틴 | 아침 8시 라이브 (Vh_oryZm48g)
+[2026-02-27 09:23:29] Error fetching playlist: 'cp949' codec can't encode character '\U0001f31e' in position 72: illegal multibyte sequence
+[2026-02-27 09:23:29] No video found in playlist (Attempt 1).
+[2026-02-27 09:23:29] Waiting 30 seconds before retry...
+[2026-02-27 09:24:00] Matched today's video: 한국경제신문 30분 만에 읽기 | 20260227🌞#모닝루틴 | 아침 8시 라이브 (Vh_oryZm48g)
+[2026-02-27 09:24:00] Error fetching playlist: 'cp949' codec can't encode character '\U0001f31e' in position 72: illegal multibyte sequence
+[2026-02-27 09:24:00] No video found in playlist (Attempt 2).
+[2026-02-27 09:24:00] Waiting 30 seconds before retry...
+[2026-02-27 09:24:32] Matched today's video: 한국경제신문 30분 만에 읽기 | 20260227🌞#모닝루틴 | 아침 8시 라이브 (Vh_oryZm48g)
+[2026-02-27 09:24:32] Error fetching playlist: 'cp949' codec can't encode character '\U0001f31e' in position 72: illegal multibyte sequence
+[2026-02-27 09:24:32] No video found in playlist (Attempt 3).
+[2026-02-27 09:24:32] 당일 [AM] 업데이트 없음
+[2026-02-27 09:24:59] Starting Agent B for AM...
+[2026-02-27 09:24:59] Matched today's video: 한국경제신문 30분 만에 읽기 | 20260227🌞#모닝루틴 | 아침 8시 라이브 (Vh_oryZm48g)
+[2026-02-27 09:24:59] Found video ID: Vh_oryZm48g | Title: 한국경제신문 30분 만에 읽기 | 20260227🌞#모닝루틴 | 아침 8시 라이브 (Attempt 1)
+[2026-02-27 09:25:23] Report saved to output\reports\20260227_AM_분석보고서.md
+[2026-02-27 12:08:49] Starting Agent B for AM...
+[2026-02-27 12:08:50] Matched today's video: 한국경제신문 30분 만에 읽기 | 20260227🌞#모닝루틴 | 아침 8시 라이브 (Vh_oryZm48g)
+[2026-02-27 12:08:50] Found video ID: Vh_oryZm48g | Title: 한국경제신문 30분 만에 읽기 | 20260227🌞#모닝루틴 | 아침 8시 라이브 (Attempt 1)
+[2026-02-27 12:09:11] Report saved to output\reports\20260227_AM_분석보고서.md
+[2026-02-27 12:35:15] Starting Agent B for AM...
+[2026-02-27 12:35:16] Matched today's video: 한국경제신문 30분 만에 읽기 | 20260227🌞#모닝루틴 | 아침 8시 라이브 (Vh_oryZm48g)
+[2026-02-27 12:35:16] Found video ID: Vh_oryZm48g | Title: 한국경제신문 30분 만에 읽기 | 20260227🌞#모닝루틴 | 아침 8시 라이브 (Attempt 1)
+[2026-02-27 12:35:59] Report saved to output\reports\20260227_AM_분석보고서.md
+[2026-02-27 12:55:25] Starting Agent B for AM...
+[2026-02-27 12:55:26] Matched today's video: 한국경제신문 30분 만에 읽기 | 20260227🌞#모닝루틴 | 아침 8시 라이브 (Vh_oryZm48g)
+[2026-02-27 12:55:26] Found video ID: Vh_oryZm48g | Title: 한국경제신문 30분 만에 읽기 | 20260227🌞#모닝루틴 | 아침 8시 라이브 (Attempt 1)
+[2026-02-27 12:55:50] Report saved to output\reports\20260227_AM_분석보고서.md
+[2026-02-27 13:06:49] Starting Agent B for AM...
+[2026-02-27 13:06:51] Matched today's video: 한국경제신문 30분 만에 읽기 | 20260227🌞#모닝루틴 | 아침 8시 라이브 (Vh_oryZm48g)
+[2026-02-27 13:06:51] Found video ID: Vh_oryZm48g | Title: 한국경제신문 30분 만에 읽기 | 20260227🌞#모닝루틴 | 아침 8시 라이브 (Attempt 1)
+[2026-02-27 13:07:47] Report saved to output\reports\20260227_AM_분석보고서.md
+[2026-02-27 13:12:26] Starting Agent B for AM...
+[2026-02-27 13:12:27] Matched today's video: 한국경제신문 30분 만에 읽기 | 20260227🌞#모닝루틴 | 아침 8시 라이브 (Vh_oryZm48g)
+[2026-02-27 13:12:27] Found video ID: Vh_oryZm48g | Title: 한국경제신문 30분 만에 읽기 | 20260227🌞#모닝루틴 | 아침 8시 라이브 (Attempt 1)
+[2026-02-27 13:12:48] Report saved to output\reports\20260227_AM_분석보고서.md
+[2026-02-27 13:18:10] Starting Agent B for AM...
+[2026-02-27 13:18:11] Matched today's video: 한국경제신문 30분 만에 읽기 | 20260227🌞#모닝루틴 | 아침 8시 라이브 (Vh_oryZm48g)
+[2026-02-27 13:18:11] Found video ID: Vh_oryZm48g | Title: 한국경제신문 30분 만에 읽기 | 20260227🌞#모닝루틴 | 아침 8시 라이브 (Attempt 1)
+[2026-02-27 13:19:34] Report saved to output\reports\20260227_AM_분석보고서.md
+[2026-02-27 13:23:51] Starting Agent B for AM...
+[2026-02-27 13:23:52] Matched today's video: 한국경제신문 30분 만에 읽기 | 20260227🌞#모닝루틴 | 아침 8시 라이브 (Vh_oryZm48g)
+[2026-02-27 13:23:52] Found video ID: Vh_oryZm48g | Title: 한국경제신문 30분 만에 읽기 | 20260227🌞#모닝루틴 | 아침 8시 라이브 (Attempt 1)
+[2026-02-27 13:24:53] Report saved to output\reports\20260227_AM_분석보고서.md
+[2026-02-27 13:27:05] Starting Agent B for AM...
+[2026-02-27 13:27:07] Matched today's video: 한국경제신문 30분 만에 읽기 | 20260227🌞#모닝루틴 | 아침 8시 라이브 (Vh_oryZm48g)
+[2026-02-27 13:27:07] Found video ID: Vh_oryZm48g | Title: 한국경제신문 30분 만에 읽기 | 20260227🌞#모닝루틴 | 아침 8시 라이브 (Attempt 1)
+[2026-02-27 13:27:51] Report saved to output\reports\20260227_AM_분석보고서.md
