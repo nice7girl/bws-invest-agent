@@ -3,8 +3,8 @@ import subprocess
 from datetime import datetime
 
 # --- Configuration ---
-AM_TIME = "08:50"
-PM_TIME = "17:50"
+AM_TIME = "08:40"
+PM_TIME = "17:40"
 
 def log(message):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
