@@ -12,7 +12,7 @@ import io
 
 # --- Configuration ---
 # Set your Google API Key here or in environment variables
-API_KEY = os.getenv("GOOGLE_API_KEY", "AIzaSyCvDAQbVxdRJnsUCDW11Dl3I7MVfi6OMmY")
+API_KEY = os.getenv("GOOGLE_API_KEY", "")
 genai.configure(api_key=API_KEY)
 
 PLAYLISTS = {
