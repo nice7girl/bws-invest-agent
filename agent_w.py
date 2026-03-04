@@ -6,7 +6,7 @@ from datetime import datetime
 # --- Configuration ---
 # Set your Telegram Bot Token and Chat ID here or in environment variables
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8589073083:AAHXqx9o5SZXciMxYKXbeKhwXQFWLW6X20s")
-TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "7022508795")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "7022508795,-1003526043076")
 
 WATCH_DIR = os.path.join("output", "reports")  # Agent B가 저장하는 위치
 PROCESSED_LOG = "data/processed_reports.txt"
@@ -60,18 +60,25 @@ def run_agent_w():
 
     # 오늘 날짜 (YYYYMMDD) 추출
     today_prefix = datetime.now().strftime("%Y%m%d")
+    
+    # 쉼표로 구분된 여러 채팅 ID 처리
+    raw_chat_ids = TELEGRAM_CHAT_ID.split(",")
+    chat_ids = [cid.strip() for cid in raw_chat_ids if cid.strip()]
+    
+    if not chat_ids:
+        log("Error: No TELEGRAM_CHAT_ID specified.")
+        return
+        
     log(f"Filtering for today's reports (prefix: {today_prefix})")
+    log(f"Target Chat IDs: {chat_ids}")
 
     all_files = os.listdir(WATCH_DIR)
-    log(f"Total files in directory: {len(all_files)}")
-    
     # 당일 보고서만 필터링 (YYYYMMDD로 시작하는 파일)
     files = [f for f in all_files if f.startswith(today_prefix) and re.search(r'_(AM|PM)_.*\.md$', f)]
     log(f"Matching today's report files found: {len(files)}")
     
     for file_name in files:
         if file_name not in processed_files:
-            log(f"Processing new report: {file_name}")
             log(f"Processing new report: {file_name}")
             file_path = os.path.join(WATCH_DIR, file_name)
             
@@ -82,23 +89,36 @@ def run_agent_w():
             timeframe = "AM Brief" if "_AM_" in file_name else "PM Brief"
             title = f"☀️ &lt;우석에 닿기를&gt; 투자 동향 분석 {timeframe}"
             
-            # Simple conversion: **text** -> <b>text</b>
-            # 먼저 HTML 이스케이프를 한 뒤, ** 패턴을 <b>로 변환
             safe_content = html.escape(content)
             formatted_content = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', safe_content)
             
-            # 링크 추가
             youtube_link = "https://www.youtube.com/@우석에닿기를"
             message = f"<b>{title}</b>\n\n{formatted_content}\n\n{youtube_link}"
             
             if len(message) > 4000:
                 message = message[:4000] + "\n\n...(이하 생략)"
             
-            if send_telegram_message(message):
-                log("Successfully sent to Telegram.")
+            success_count = 0
+            for cid in chat_ids:
+                # payload 복사하여 chat_id만 교체
+                url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
+                payload = {
+                    "chat_id": cid,
+                    "text": message,
+                    "parse_mode": "HTML"
+                }
+                try:
+                    response = requests.post(url, json=payload, timeout=10)
+                    if response.status_code == 200:
+                        log(f"Successfully sent to Telegram Chat ID: {cid}")
+                        success_count += 1
+                    else:
+                        log(f"Telegram API Error (ID: {cid}): {response.status_code} - {response.text}")
+                except Exception as e:
+                    log(f"Error sending to {cid}: {e}")
+
+            if success_count > 0:
                 mark_as_processed(file_name)
-            else:
-                log("Failed to send to Telegram.")
 
 if __name__ == "__main__":
     run_agent_w()

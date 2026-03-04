@@ -1,0 +1,6 @@
+LAMP_VIBE 서버 정보
+IP : 3.38.232.134
+User : bitnami
+Key : C:\Users\SKTelecom\Desktop\SSHkey.pem
+서버 웹 디렉토리 :	/opt/bitnami/apache/htdocs
+MySQL DB p/w : 	HNJ.Kqu+9OR5

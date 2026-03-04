@@ -40,14 +40,25 @@ ssh -i "$SSH_KEY" $SERVER_USER@$SERVER_IP "
     echo 'Python 패키지 설치 완료'
 "
 
-# 4. cron 등록 (평일 08:50 AM / 17:50 PM)
-echo "[4/4] Cron 스케줄 등록..."
+# 4. Apache 심볼릭 링크 설정 (로컬 체크용)
+echo "[4/5] Apache 심볼릭 링크 설정..."
+ssh -i "$SSH_KEY" $SERVER_USER@$SERVER_IP "
+    sudo mkdir -p /opt/bitnami/apache/htdocs/bws_reports
+    sudo ln -sf $REMOTE_DIR/output/reports/*.md /opt/bitnami/apache/htdocs/bws_reports/ 2>/dev/null || true
+    sudo ln -sfn $REMOTE_DIR/output/reports /opt/bitnami/apache/htdocs/bws_reports 2>/dev/null || true
+    echo '심볼릭 링크 설정 완료'
+"
+
+# 5. cron 등록 (서버는 UTC 기준이므로 KST 시간에 맞춰 변환)
+# KST 08:35 -> UTC 23:35 (전날) / 월-금 KST -> 일-목 UTC (0-4)
+# KST 17:35 -> UTC 08:35 (당일) / 월-금 KST -> 월-금 UTC (1-5)
+echo "[5/5] Cron 스케줄 등록 (UTC 기준)..."
 ssh -i "$SSH_KEY" $SERVER_USER@$SERVER_IP "
     # 기존 bws 관련 cron 삭제 후 재등록
     (crontab -l 2>/dev/null | grep -v 'bws-invest'; \
-     echo '50 8 * * 1-5 cd $REMOTE_DIR && python3 main.py AM >> $REMOTE_DIR/logs/cron.log 2>&1'; \
-     echo '50 17 * * 1-5 cd $REMOTE_DIR && python3 main.py PM >> $REMOTE_DIR/logs/cron.log 2>&1') | crontab -
-    echo 'Cron 등록 완료:'
+     echo '35 23 * * 0-4 cd $REMOTE_DIR && PYTHONIOENCODING=utf-8 python3 main.py AM --skip-agent-s >> $REMOTE_DIR/logs/cron.log 2>&1'; \
+     echo '35 8 * * 1-5 cd $REMOTE_DIR && PYTHONIOENCODING=utf-8 python3 main.py PM --skip-agent-s >> $REMOTE_DIR/logs/cron.log 2>&1') | crontab -
+    echo 'Cron 등록 완료 (UTC 23:35 / 08:35):'
     crontab -l | grep bws
 "
 

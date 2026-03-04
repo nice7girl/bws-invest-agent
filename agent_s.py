@@ -177,7 +177,7 @@ def generate_fallback_script(report_content: str, timeframe: str, date_str: str)
     try:
         import google.generativeai as genai
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel("models/gemini-2.0-flash-lite")
+        model = genai.GenerativeModel("gemini-1.5-flash-latest")
         
         if timeframe == "AM":
             opening = "안녕하세요, <우석에 닿기를> 투자 동향 분석입니다. 오늘은 당일 주요 기사들을 바탕으로 어제 시장에 대한 심층 분석 내용을 준비했습니다."

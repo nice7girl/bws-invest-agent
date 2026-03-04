@@ -609,3 +609,103 @@ violations {
 [2026-02-27 13:27:07] Matched today's video: 한국경제신문 30분 만에 읽기 | 20260227🌞#모닝루틴 | 아침 8시 라이브 (Vh_oryZm48g)
 [2026-02-27 13:27:07] Found video ID: Vh_oryZm48g | Title: 한국경제신문 30분 만에 읽기 | 20260227🌞#모닝루틴 | 아침 8시 라이브 (Attempt 1)
 [2026-02-27 13:27:51] Report saved to output\reports\20260227_AM_분석보고서.md
+[2026-02-27 18:11:58] Starting Agent B for PM...
+[2026-02-27 18:11:59] Found video ID: yrPt0bn1xpM | Title: 외국인 무려 7조 매도, 환율 다시 급등 [2월27일 #퇴근요정] (Attempt 1)
+[2026-02-27 18:12:24] Error during Gemini analysis: 403 Your API key was reported as leaked. Please use another API key.
+[2026-02-27 18:12:24] Waiting 30 seconds before retry...
+[2026-02-27 18:12:56] Found video ID: yrPt0bn1xpM | Title: 외국인 무려 7조 매도, 환율 다시 급등 [2월27일 #퇴근요정] (Attempt 2)
+[2026-02-27 18:12:58] Error during Gemini analysis: 403 Your API key was reported as leaked. Please use another API key.
+[2026-02-27 18:12:58] Waiting 30 seconds before retry...
+[2026-02-27 18:13:30] Found video ID: yrPt0bn1xpM | Title: 외국인 무려 7조 매도, 환율 다시 급등 [2월27일 #퇴근요정] (Attempt 3)
+[2026-02-27 18:13:32] Error during Gemini analysis: 403 Your API key was reported as leaked. Please use another API key.
+[2026-02-27 18:13:32] 당일 [PM] 업데이트 없음
+[2026-02-27 18:19:18] Starting Agent B for PM...
+[2026-02-27 18:19:19] Found video ID: yrPt0bn1xpM | Title: 외국인 무려 7조 매도, 환율 다시 급등 [2월27일 #퇴근요정] (Attempt 1)
+[2026-02-27 18:20:13] Report saved to output\reports\20260227_PM_분석보고서.md
+[2026-02-28 09:04:15] Starting Agent B for PM...
+[2026-02-28 09:04:16] Found video ID: yrPt0bn1xpM | Title: 외국인 무려 7조 매도, 환율 다시 급등 [2월27일 #퇴근요정] (Attempt 1)
+[2026-02-28 09:04:37] Report saved to output\reports\20260228_PM_분석보고서.md
+[2026-02-28 09:08:26] Starting Agent B for PM...
+[2026-02-28 09:08:27] Found video ID: yrPt0bn1xpM | Title: 외국인 무려 7조 매도, 환율 다시 급등 [2월27일 #퇴근요정] (Attempt 1)
+[2026-02-28 09:08:48] Report saved to output\reports\20260228_PM_분석보고서.md
+[2026-02-28 09:12:29] Starting Agent B for PM...
+[2026-02-28 09:12:30] Found video ID: yrPt0bn1xpM | Title: 외국인 무려 7조 매도, 환율 다시 급등 [2월27일 #퇴근요정] (Attempt 1)
+[2026-02-28 09:12:48] Report saved to output\reports\20260228_PM_분석보고서.md
+[2026-02-28 09:18:44] Starting Agent B for PM...
+[2026-02-28 09:18:44] Found video ID: yrPt0bn1xpM | Title: 외국인 무려 7조 매도, 환율 다시 급등 [2월27일 #퇴근요정] (Attempt 1)
+[2026-02-28 09:19:04] Report saved to output\reports\20260228_PM_분석보고서.md
+[2026-02-28 09:25:48] Starting Agent B for PM...
+[2026-02-28 09:25:49] Found video ID: yrPt0bn1xpM | Title: 외국인 무려 7조 매도, 환율 다시 급등 [2월27일 #퇴근요정] (Attempt 1)
+[2026-02-28 09:26:09] Report saved to output\reports\20260228_PM_분석보고서.md
+[2026-03-03 09:27:45] Starting Agent B for AM...
+[2026-03-03 09:27:47] Matched today's video: 한국경제신문 30분 만에 읽기 | 20260303🌞#모닝루틴 | 아침 8시 라이브 (Iiru6q3tMac)
+[2026-03-03 09:27:47] Found video ID: Iiru6q3tMac | Title: 한국경제신문 30분 만에 읽기 | 20260303🌞#모닝루틴 | 아침 8시 라이브 (Attempt 1)
+[2026-03-03 09:28:24] Report saved to output\reports\20260303_AM_분석보고서.md
+[2026-03-03 17:51:58] Starting Agent B for PM...
+[2026-03-03 17:51:59] Found video ID: 8vz_udP2hOw | Title: 역대급 폭락장 집중분석 [3월3일 #퇴근요정] (Attempt 1)
+[2026-03-03 17:51:59] Attempting transcript for 8vz_udP2hOw
+[2026-03-03 17:51:59] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-03 17:51:59] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-03 17:51:59] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-03 17:52:01] Instance list() failed: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=8vz_udP2hOw! This is most likely caused by:
+
+Subtitles are disabled for this video
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+[2026-03-03 17:52:01] Error fetching transcript for 8vz_udP2hOw: All list methods failed
+[2026-03-03 17:52:01] Failed to extract transcript for 8vz_udP2hOw.
+[2026-03-03 17:52:01] Waiting 30 seconds before retry...
+[2026-03-03 17:52:32] Found video ID: 8vz_udP2hOw | Title: 역대급 폭락장 집중분석 [3월3일 #퇴근요정] (Attempt 2)
+[2026-03-03 17:52:32] Attempting transcript for 8vz_udP2hOw
+[2026-03-03 17:52:32] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-03 17:52:32] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-03 17:52:32] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-03 17:52:34] Instance list() failed: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=8vz_udP2hOw! This is most likely caused by:
+
+Subtitles are disabled for this video
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+[2026-03-03 17:52:34] Error fetching transcript for 8vz_udP2hOw: All list methods failed
+[2026-03-03 17:52:34] Failed to extract transcript for 8vz_udP2hOw.
+[2026-03-03 17:52:34] Waiting 30 seconds before retry...
+[2026-03-03 17:53:05] Found video ID: 8vz_udP2hOw | Title: 역대급 폭락장 집중분석 [3월3일 #퇴근요정] (Attempt 3)
+[2026-03-03 17:53:05] Attempting transcript for 8vz_udP2hOw
+[2026-03-03 17:53:05] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-03 17:53:05] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-03 17:53:05] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-03 17:53:06] Instance list() failed: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=8vz_udP2hOw! This is most likely caused by:
+
+Subtitles are disabled for this video
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+[2026-03-03 17:53:06] Error fetching transcript for 8vz_udP2hOw: All list methods failed
+[2026-03-03 17:53:06] Failed to extract transcript for 8vz_udP2hOw.
+[2026-03-03 17:53:06] 당일 [PM] 업데이트 없음
+[2026-03-03 18:46:03] Starting Agent B for PM...
+[2026-03-03 18:46:04] Found video ID: 8vz_udP2hOw | Title: 역대급 폭락장 집중분석 [3월3일 #퇴근요정] (Attempt 1)
+[2026-03-03 18:46:04] Attempting transcript for 8vz_udP2hOw
+[2026-03-03 18:46:04] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-03 18:46:04] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-03 18:46:04] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-03 18:46:05] Success with instance list()
+[2026-03-03 18:46:25] Report saved to output\reports\20260303_PM_분석보고서.md
+[2026-03-04 09:20:24] Starting Agent B for AM...
+[2026-03-04 09:20:25] Matched today's video: 한국경제신문 30분 만에 읽기 | 20260304🌞#모닝루틴 | 아침 8시 라이브 (Q2J_c-O78Gk)
+[2026-03-04 09:20:25] Found video ID: Q2J_c-O78Gk | Title: 한국경제신문 30분 만에 읽기 | 20260304🌞#모닝루틴 | 아침 8시 라이브 (Attempt 1)
+[2026-03-04 09:20:25] Attempting transcript for Q2J_c-O78Gk
+[2026-03-04 09:20:25] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-04 09:20:25] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-04 09:20:25] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-04 09:20:26] Success with instance list()
+[2026-03-04 09:20:48] Report saved to output\reports\20260304_AM_분석보고서.md
+[2026-03-04 19:47:41] Starting Agent B for PM...
+[2026-03-04 19:47:42] Found video ID: SDNX-d-jduM | Title: 2622개 종목이 하락했던 아수라장 [3월4일 #퇴근요정] (Attempt 1)
+[2026-03-04 19:47:42] Attempting transcript for SDNX-d-jduM
+[2026-03-04 19:47:42] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-04 19:47:42] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-04 19:47:42] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-04 19:47:43] Success with instance list()
+[2026-03-04 19:48:09] Report saved to output\reports\20260304_PM_분석보고서.md
