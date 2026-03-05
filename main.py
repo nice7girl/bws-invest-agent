@@ -38,7 +38,8 @@ def check_server_completed(timeframe: str) -> bool:
     today_str = datetime.now().strftime("%Y%m%d")
     report_name = f"{today_str}_{timeframe}_분석보고서.md"
     # Bitnami 서버의 공개 디렉토리에 접근 (deploy.sh에서 심볼릭 링크 설정 필요)
-    url = f"http://3.38.232.134/bws_reports/{report_name}"
+    server_ip = os.getenv("SERVER_IP", "YOUR_SERVER_IP")
+    url = f"http://{server_ip}/bws_reports/{report_name}"
     
     try:
         # 헤더만 요청하여 파일 존재 여부만 빠르게 확인

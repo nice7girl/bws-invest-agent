@@ -1,7 +1,8 @@
+import os
 import requests
 import json
 
-TOKEN = "8589073083:AAHXqx9o5SZXciMxYKXbeKhwXQFWLW6X20s"
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "YOUR_TELEGRAM_BOT_TOKEN")
 url = f"https://api.telegram.org/bot{TOKEN}/getUpdates"
 
 try:

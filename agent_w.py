@@ -5,8 +5,8 @@ from datetime import datetime
 
 # --- Configuration ---
 # Set your Telegram Bot Token and Chat ID here or in environment variables
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8589073083:AAHXqx9o5SZXciMxYKXbeKhwXQFWLW6X20s")
-TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "7022508795,-1003526043076")
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
 WATCH_DIR = os.path.join("output", "reports")  # Agent B가 저장하는 위치
 PROCESSED_LOG = "data/processed_reports.txt"

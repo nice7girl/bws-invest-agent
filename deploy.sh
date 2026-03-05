@@ -5,9 +5,11 @@
 # 사용법: bash deploy.sh
 # 사전 조건: SSHkey.pem 파일이 C:\Users\SKTelecom\Desktop\ 에 있어야 함
 
-SERVER_IP="3.38.232.134"
-SERVER_USER="bitnami"
-SSH_KEY="/mnt/c/Users/SKTelecom/Desktop/SSHkey.pem"  # WSL 경로 또는 절대 경로로 수정
+# SERVER_IP, SERVER_USER, SSH_KEY 환경 변수가 설정되어 있어야 합니다.
+# 예: export SERVER_IP="x.x.x.x"
+SERVER_IP=${SERVER_IP:-"YOUR_SERVER_IP"}
+SERVER_USER=${SERVER_USER:-"YOUR_SERVER_USER"}
+SSH_KEY=${SSH_KEY:-"PATH_TO_YOUR_SSH_KEY"}
 REMOTE_DIR="/home/bitnami/bws-invest"
 
 echo "======================================"

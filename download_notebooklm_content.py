@@ -24,7 +24,7 @@ from browser_utils import BrowserFactory
 from auth_manager import AuthManager
 
 # 기본 노트북 URL 및 저장 경로
-DEFAULT_URL = "https://notebooklm.google.com/notebook/2f776ab3-2acc-4925-98ac-2d8997b1bea3"
+DEFAULT_URL = os.getenv("NOTEBOOKLM_URL", "YOUR_NOTEBOOKLM_URL")
 OUT_DIR = Path(__file__).parent / "output" / "notebook_content"
 
 def js_click(page, locator):

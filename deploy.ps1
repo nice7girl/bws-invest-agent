@@ -4,9 +4,10 @@
 # 사용법: powershell -ExecutionPolicy Bypass -File deploy.ps1
 # 사전 조건: OpenSSH 설치 필요 (Windows 10+ 기본 포함)
 
-$SERVER_IP = "3.38.232.134"
-$SERVER_USER = "bitnami"
-$SSH_KEY = "C:\Users\SKTelecom\Desktop\SSHkey.pem"
+# 환경 변수 또는 config.json에서 정보를 가져옵니다.
+$SERVER_IP = if ($env:SERVER_IP) { $env:SERVER_IP } else { "YOUR_SERVER_IP" }
+$SERVER_USER = if ($env:SERVER_USER) { $env:SERVER_USER } else { "YOUR_SERVER_USER" }
+$SSH_KEY = if ($env:SSH_KEY) { $env:SSH_KEY } else { "PATH_TO_YOUR_SSH_KEY" }
 $REMOTE_DIR = "/home/bitnami/bws-invest"
 $LOCAL_DIR = $PSScriptRoot   # 이 스크립트가 있는 폴더
 

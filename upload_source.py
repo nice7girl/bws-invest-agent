@@ -30,7 +30,7 @@ from browser_utils import BrowserFactory
 from auth_manager import AuthManager
 
 # 업로드할 노트북 URL
-NOTEBOOK_URL = "https://notebooklm.google.com/notebook/2f776ab3-2acc-4925-98ac-2d8997b1bea3"
+NOTEBOOK_URL = os.getenv("NOTEBOOKLM_URL", "YOUR_NOTEBOOKLM_URL")
 
 
 def js_click(page, locator):

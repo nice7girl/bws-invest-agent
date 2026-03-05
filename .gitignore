@@ -13,3 +13,8 @@ output/scripts/*.md
 
 # Ignore configuration files with secrets
 config.json
+.env
+*.pem
+*서버 정보.txt
+*.key
+*.log
