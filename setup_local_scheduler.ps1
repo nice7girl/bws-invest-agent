@@ -1,16 +1,16 @@
 # BWS Invest Agent - Windows 로컬 자동화 설정 스크립트
-# 서버 연결 불가 시 PC를 켜두면 자동으로 에이전트가 실행되도록 설정합니다.
+# 100% 로컬 PC에서 실행되도록 설정합니다.
 
 $ScriptPath = Join-Path $PSScriptRoot "main.py"
 $PythonPath = "C:\Program Files\Python312\python.exe" # 절대 경로 사용
 
-# 1. AM Task (08:50) - 서버(08:35) 실패 시 폴백 실행
-$AM_Action = New-ScheduledTaskAction -Execute $PythonPath -Argument "$ScriptPath AM" -WorkingDirectory $PSScriptRoot
-$AM_Trigger = New-ScheduledTaskTrigger -At 08:50 -Daily
+# 1. AM Task (09:00)
+$AM_Action = New-ScheduledTaskAction -Execute $PythonPath -Argument """$ScriptPath"" AM" -WorkingDirectory $PSScriptRoot
+$AM_Trigger = New-ScheduledTaskTrigger -At 09:00 -Daily
 
-# 2. PM Task (17:50) - 서버(17:35) 실패 시 폴백 실행
-$PM_Action = New-ScheduledTaskAction -Execute $PythonPath -Argument "$ScriptPath PM" -WorkingDirectory $PSScriptRoot
-$PM_Trigger = New-ScheduledTaskTrigger -At 17:50 -Daily
+# 2. PM Task (18:30)
+$PM_Action = New-ScheduledTaskAction -Execute $PythonPath -Argument """$ScriptPath"" PM" -WorkingDirectory $PSScriptRoot
+$PM_Trigger = New-ScheduledTaskTrigger -At 18:30 -Daily
 
 # 기존 테스크 삭제
 Unregister-ScheduledTask -TaskName "BWS_Invest_AM" -Confirm:$false -ErrorAction SilentlyContinue
@@ -29,8 +29,8 @@ Register-ScheduledTask -TaskName "BWS_Invest_PM" -Action $PM_Action -Trigger $PM
 Write-Host "======================================" -ForegroundColor Cyan
 Write-Host " 로컬 작업 스케줄러 등록 완료!" -ForegroundColor Green
 Write-Host "======================================" -ForegroundColor Cyan
-Write-Host "1. 오전 스케줄: 매일 08:50"
-Write-Host "2. 오후 스케줄: 매일 17:50"
+Write-Host "1. 오전 스케줄: 매일 09:00"
+Write-Host "2. 오후 스케줄: 매일 18:30"
 Write-Host ""
 Write-Host "※ 주의: PC가 절전 모드이거나 꺼져 있으면 실행되지 않습니다."
 Write-Host "※ 관리자 권한으로 실행해야 테스크 등록이 가능할 수 있습니다."

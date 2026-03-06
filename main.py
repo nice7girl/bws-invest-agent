@@ -59,12 +59,13 @@ def run_pipeline(timeframe: str, skip_agent_s: bool = False, force: bool = False
     print(f"[START] BWS Invest Pipeline [{timeframe}] - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"{'='*50}\n")
 
-    # 로컬 실행 시 서버 완료 여부 체크 (중복 발송 방지)
-    # --force 옵션이 있거나 timeframe이 PM일 때는 수동 실행일 수 있으므로 체크 생략 가능 (필요시 조정)
+    # 로컬 실행 전용 (서버 체크 비화성화)
+    """
     if not force:
         if check_server_completed(timeframe):
             print(f">>> 서버(Priority 1)에서 이미 완료되었습니다. 로컬 실행을 중단합니다.")
             return
+    """
 
     # 1. Agent B: YouTube 분석 및 보고서 생성
     print("[Agent B] YouTube 분석 시작...")
