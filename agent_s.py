@@ -25,6 +25,21 @@ else:
 REPORTS_DIR = Path(__file__).parent / "output" / "reports"   # Agent B 보고서
 SCRIPTS_DIR = Path(__file__).parent / "output" / "scripts"   # Agent S 영상기획
 
+# --- Configuration ---
+def load_config():
+    import json
+    config_path = os.path.join(os.path.dirname(__file__), "config.json")
+    if os.path.exists(config_path):
+        try:
+            with open(config_path, "r", encoding="utf-8") as f:
+                config = json.load(f)
+                for key, value in config.items():
+                    os.environ[key] = value
+        except Exception:
+            pass
+
+load_config()
+
 # NotebookLM 노트북 URL
 NOTEBOOK_URL = os.getenv("NOTEBOOKLM_URL", "YOUR_NOTEBOOKLM_URL")
 
@@ -177,7 +192,7 @@ def generate_fallback_script(report_content: str, timeframe: str, date_str: str)
     try:
         import google.generativeai as genai
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel("gemini-1.5-flash-latest")
+        model = genai.GenerativeModel("gemini-flash-latest")
         
         if timeframe == "AM":
             opening = "안녕하세요, <우석에 닿기를> 투자 동향 분석입니다. 오늘은 당일 주요 기사들을 바탕으로 어제 시장에 대한 심층 분석 내용을 준비했습니다."
@@ -226,17 +241,15 @@ def create_date_instruction_file(date_str: str) -> str:
 
 def run_agent_s(timeframe: str) -> bool:
     """
-    Agent S 메인 실행 함수 (Video Content Producer 버전)
+    Agent S 메인 실행 함수 (NotebookLM 업로드 전용)
     """
-    log(f"=== Agent S 시작 (Video Content Producer) [{timeframe}] ===")
+    log(f"=== Agent S 시작 (NotebookLM 업로드) [{timeframe}] ===")
     
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
-    SCRIPTS_DIR.mkdir(parents=True, exist_ok=True)
     
     # 1. 보고서 파일 확인
     now = datetime.now()
     date_str = now.strftime("%Y%m%d")
-    full_date = now.strftime("%Y년 %m월 %d일")
     report_file = REPORTS_DIR / f"{date_str}_{timeframe}_분석보고서.md"
     
     if not report_file.exists():
@@ -245,68 +258,16 @@ def run_agent_s(timeframe: str) -> bool:
     
     log(f"보고서 확인: {report_file}")
     
-    with open(report_file, "r", encoding="utf-8") as f:
-        report_content = f.read()
-    
-    # 2. 날짜 지침 및 보고서 업로드
-    # (1) 날짜 지침 업로드
-    instr_path = create_date_instruction_file(full_date)
-    upload_report_to_notebook(instr_path)
-    
-    # (2) 보고서 업로드
+    # 2. 보고서 업로드
     upload_success = upload_report_to_notebook(str(report_file))
     
     if upload_success:
-        log("NotebookLM 소스 처리 대기 중 (15초)...")
-        time.sleep(15)
-    
-    # 3. NotebookLM에 영상 기획 스크립트 생성 질의
-    if timeframe == "AM":
-        opening = "안녕하세요, <우석에 닿기를> 투자 동향 분석입니다. 오늘은 당일 주요 기사들을 바탕으로 어제 시장에 대한 심층 분석 내용을 준비했습니다."
-        prompt_goal = "핵심 포인트 3가지를 중심으로 5분 분량의 영상 스크립트와 스토리보드 가이드를 작성해줘."
+        log("NotebookLM 소스 업로드 완료.")
     else:
-        opening = "안녕하세요, <우석에 닿기를> 투자 동향 분석입니다. 지금부터 오늘 당일 시장 장 흐름과 주요 이슈에 대해 핵심만 정리해 드립니다."
-        prompt_goal = "핵심 포인트 3가지를 중심으로 5분 분량의 영상 스크립트와 스토리보드 가이드를 작성해줘."
-    
-    question = f"""
-오늘 날짜({full_date})를 명시하고, 다음 지침에 따라 5분 분량의 영상 기획안을 작성해줘.
-
-1. 오프닝: 반드시 "{opening}"로 시작할 것.
-2. 구조: 정확히 5분 내외 분량으로 '핵심 포인트 3가지'를 선정하여 깊이 있게 다룰 것.
-3. 시각 자료: 각 포인트마다 차트, 데이터 카드, 인포그래픽 등 적합한 시각 자료 삽입 구간을 [시각 가이드] 형태로 정의할 것.
-4. 형식: 진행자 대본과 화면 연출 지침이 포함된 스토리보드 형식으로 작성해줘.
-
-위 지침을 바탕으로 다음 보고서를 분석하여 기획해줘.
-"""
-    
-    script_output = ask_notebooklm(question)
-    
-    # 4. 실패 시 폴백
-    if not script_output:
-        log("NotebookLM 응답 없음 → Gemini 폴백 사용")
-        script_output = generate_fallback_script(report_content, timeframe, date_str)
-        output_filename = f"{date_str}_{timeframe}_영상기획_fallback.md"
-    else:
-        output_filename = f"{date_str}_{timeframe}_영상기획.md"
-    
-    # 5. 결과 저장
-    output_file = SCRIPTS_DIR / output_filename
-    with open(output_file, "w", encoding="utf-8") as f:
-        header = f"# {date_str} {timeframe} 영상 기획 스크립트\n\n"
-        header += f"> 생성 시각: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
-        header += "---\n\n"
-        f.write(header + script_output)
-    
-    log(f"영상 기획안 저장 완료: {output_file}")
-    
-    # 6. 생성된 영상 기획 스크립트를 NotebookLM에 업로드
-    log("생성된 영상 기획 스크립트를 NotebookLM에 추가 업로드 중...")
-    upload_success2 = upload_report_to_notebook(str(output_file))
-    if upload_success2:
-        log("스크립트 업로드 완료.")
+        log("NotebookLM 소스 업로드 실패.")
     
     log("=== Agent S 완료 ===")
-    return True
+    return upload_success
 
 
 if __name__ == "__main__":

@@ -4,7 +4,19 @@ import time
 from datetime import datetime
 
 # --- Configuration ---
-# Set your Telegram Bot Token and Chat ID here or in environment variables
+def load_config():
+    import json
+    config_path = os.path.join(os.path.dirname(__file__), "config.json")
+    if os.path.exists(config_path):
+        try:
+            with open(config_path, "r", encoding="utf-8") as f:
+                config = json.load(f)
+                for key, value in config.items():
+                    os.environ[key] = value
+        except Exception:
+            pass
+
+load_config()
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 

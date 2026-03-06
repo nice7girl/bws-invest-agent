@@ -11,7 +11,19 @@ import io
 # Removed manual sys.stdout/stderr wrapping to fix I/O issues
 
 # --- Configuration ---
-# Set your Google API Key here or in environment variables
+def load_config():
+    import json
+    config_path = os.path.join(os.path.dirname(__file__), "config.json")
+    if os.path.exists(config_path):
+        try:
+            with open(config_path, "r", encoding="utf-8") as f:
+                config = json.load(f)
+                for key, value in config.items():
+                    os.environ[key] = value
+        except Exception:
+            pass
+
+load_config()
 API_KEY = os.getenv("GOOGLE_API_KEY", "")
 genai.configure(api_key=API_KEY)
 
@@ -44,24 +56,49 @@ def log(message):
 
 def get_latest_video_id(playlist_url, timeframe):
     try:
+        import json
         response = requests.get(playlist_url, timeout=10)
         if response.status_code != 200:
             return None, None
             
-        # Extract video IDs and Titles to ensure we get today's video
-        script_content = response.text
-        video_data = re.findall(r'"videoId":"([^"]+)".*?"title":\{"runs":\[\{"text":"([^"]+)"\}\]', script_content)
+        # 1. Robust JSON extraction from ytInitialData
+        match = re.search(r'var ytInitialData = (\{.*?\});', response.text)
+        video_data = []
+        if match:
+            try:
+                data = json.loads(match.group(1))
+                # navigate to contents (this path is typical for desktop)
+                try:
+                    section_contents = data['contents']['twoColumnBrowseResultsRenderer']['tabs'][0]['tabRenderer']['content']['sectionListRenderer']['contents'][0]['itemSectionRenderer']['contents'][0]['playlistVideoListRenderer']['contents']
+                    for item in section_contents:
+                        if 'playlistVideoRenderer' in item:
+                            vid = item['playlistVideoRenderer']['videoId']
+                            title = item['playlistVideoRenderer']['title']['runs'][0]['text']
+                            video_data.append((vid, title))
+                except (KeyError, IndexError, TypeError):
+                    pass
+            except Exception as e:
+                log(f"JSON navigation failed: {e}")
         
+        # 2. Fallback to regex if JSON extraction yielded nothing
+        if not video_data:
+            # Match specifically in playlistVideoRenderer context to pair correctly
+            video_data = re.findall(r'"playlistVideoRenderer":\{"videoId":"([^"]+)".*?"title":\{"runs":\[\{"text":"([^"]+)"\}\]', response.text)
+        
+        # 3. Last resort legacy regex
+        if not video_data:
+            video_data = re.findall(r'"videoId":"([^"]+)".*?"title":\{"runs":\[\{"text":"([^"]+)"\}\]', response.text)
+
         today_str = datetime.now().strftime("%Y%m%d")
+        today_kr_str = f"{datetime.now().month}월{datetime.now().day}일"
         
         for video_id, title in video_data:
-            # Check if today's date is in title (e.g., 20260227)
-            if today_str in title:
+            if today_str in title or today_kr_str in title:
                 log(f"Matched today's video: {title} ({video_id})")
                 return video_id, title
         
-        # If no date match, take the first one as fallback
         if video_data:
+            log(f"No date match, using latest from playlist: {video_data[0][1]} ({video_data[0][0]})")
             return video_data[0][0], video_data[0][1]
             
     except Exception as e:
@@ -75,8 +112,17 @@ def get_transcript(video_id):
         
         transcript_list = None
         
-        # 1. Try static list()
-        if hasattr(YouTubeTranscriptApi, 'list'):
+        # 1. Try static list_transcripts()
+        if hasattr(YouTubeTranscriptApi, 'list_transcripts'):
+            try:
+                log("Trying YouTubeTranscriptApi.list_transcripts(video_id)...")
+                transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
+                log("Success with list_transcripts()")
+            except Exception as e:
+                log(f"list_transcripts() failed: {e}")
+
+        # 2. Try static list()
+        if not transcript_list and hasattr(YouTubeTranscriptApi, 'list'):
             try:
                 log("Trying YouTubeTranscriptApi.list(video_id)...")
                 transcript_list = YouTubeTranscriptApi.list(video_id)
@@ -84,7 +130,7 @@ def get_transcript(video_id):
             except Exception as e:
                 log(f"YouTubeTranscriptApi.list() failed: {e}")
 
-        # 2. Try instance list() if not yet successful
+        # 3. Try instance list()
         if not transcript_list:
             try:
                 log("Trying api = YouTubeTranscriptApi(); api.list(video_id)...")
@@ -94,41 +140,39 @@ def get_transcript(video_id):
             except Exception as e:
                 log(f"Instance list() failed: {e}")
 
-        # 3. Try standard static list_transcripts()
-        if not transcript_list and hasattr(YouTubeTranscriptApi, 'list_transcripts'):
+        if transcript_list:
+            # Try to find Korean transcript
             try:
-                log("Trying YouTubeTranscriptApi.list_transcripts(video_id)...")
-                transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
-                log("Success with list_transcripts()")
-            except Exception as e:
-                log(f"list_transcripts() failed: {e}")
-
-        if not transcript_list:
-            raise Exception("All list methods failed")
-
-        # Try to find Korean transcript
-        try:
-            transcript = transcript_list.find_generated_transcript(['ko'])
-        except:
-            try:
-                transcript = transcript_list.find_transcript(['ko'])
+                transcript = transcript_list.find_generated_transcript(['ko'])
             except:
-                # Last resort: first available
-                transcript = next(iter(transcript_list))
-            
-        data = transcript.fetch()
-        return " ".join([s.get('text', '') if isinstance(s, dict) else getattr(s, 'text', '') for s in data])
+                try:
+                    transcript = transcript_list.find_transcript(['ko'])
+                except:
+                    # Last resort: first available
+                    transcript = next(iter(transcript_list))
+                
+            data = transcript.fetch()
+            return " ".join([s.get('text', '') if isinstance(s, dict) else getattr(s, 'text', '') for s in data])
         
     except Exception as e:
-        log(f"Error fetching transcript for {video_id}: {e}")
-        # One-liner fallback
-        try:
-            import youtube_transcript_api
-            if hasattr(youtube_transcript_api.YouTubeTranscriptApi, 'get_transcript'):
-                data = youtube_transcript_api.YouTubeTranscriptApi.get_transcript(video_id, languages=['ko'])
-                return " ".join([s.get('text', '') for s in data])
-        except Exception as e2:
-            log(f"Final one-liner fallback failed: {e2}")
+        log(f"Transcript API failed for {video_id}: {e}")
+        
+    # Fallback to description if transcript is unavailable
+    try:
+        log(f"Falling back to video description for {video_id}")
+        url = f"https://www.youtube.com/watch?v={video_id}"
+        response = requests.get(url, timeout=10)
+        if response.status_code == 200:
+            # Extract description from meta tags or script
+            meta_match = re.search(r'"shortDescription":"(.*?)"', response.text)
+            if meta_match:
+                # Clean up escaped newlines and unicode
+                desc = meta_match.group(1).replace("\\n", "\n")
+                log("Successfully retrieved video description as fallback.")
+                return f"[VIDEO DESCRIPTION FALLBACK]\n{desc}"
+    except Exception as e:
+        log(f"Description fallback failed: {e}")
+        
     return None
 
 def analyze_report(transcript, timeframe):

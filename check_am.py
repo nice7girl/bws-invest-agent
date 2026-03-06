@@ -3,10 +3,9 @@ import requests
 import re
 import sys
 
-# Ensure utf-8 output for Windows terminal
 sys.stdout.reconfigure(encoding='utf-8')
 
-playlist_url = "https://www.youtube.com/playlist?list=PLVups02-DZEUU9ozegLPLzfS6WiGGiI_T"
+playlist_url = "https://www.youtube.com/playlist?list=PLVups02-DZEWWyOMyk4jjGaWJ_0o1N1iO"
 
 try:
     response = requests.get(playlist_url, timeout=10)

@@ -709,3 +709,201 @@ If you are sure that the described cause is not responsible for this error and t
 [2026-03-04 19:47:42] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
 [2026-03-04 19:47:43] Success with instance list()
 [2026-03-04 19:48:09] Report saved to output\reports\20260304_PM_분석보고서.md
+[2026-03-05 10:41:03] Starting Agent B for PM...
+[2026-03-05 10:41:04] Found video ID: SDNX-d-jduM | Title: 2622개 종목이 하락했던 아수라장 [3월4일 #퇴근요정] (Attempt 1)
+[2026-03-05 10:41:04] Attempting transcript for SDNX-d-jduM
+[2026-03-05 10:41:04] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-05 10:41:04] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-05 10:41:04] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-05 10:41:05] Success with instance list()
+[2026-03-05 10:41:17] Error during Gemini analysis: 
+  No API_KEY or ADC found. Please either:
+    - Set the `GOOGLE_API_KEY` environment variable.
+    - Manually pass the key with `genai.configure(api_key=my_api_key)`.
+    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.
+[2026-03-05 10:41:17] Waiting 30 seconds before retry...
+[2026-03-05 10:41:48] Found video ID: SDNX-d-jduM | Title: 2622개 종목이 하락했던 아수라장 [3월4일 #퇴근요정] (Attempt 2)
+[2026-03-05 10:41:48] Attempting transcript for SDNX-d-jduM
+[2026-03-05 10:41:48] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-05 10:41:48] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-05 10:41:48] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-05 10:41:50] Success with instance list()
+[2026-03-05 10:42:02] Error during Gemini analysis: 
+  No API_KEY or ADC found. Please either:
+    - Set the `GOOGLE_API_KEY` environment variable.
+    - Manually pass the key with `genai.configure(api_key=my_api_key)`.
+    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.
+[2026-03-05 10:42:02] Waiting 30 seconds before retry...
+[2026-03-05 10:42:33] Found video ID: SDNX-d-jduM | Title: 2622개 종목이 하락했던 아수라장 [3월4일 #퇴근요정] (Attempt 3)
+[2026-03-05 10:42:33] Attempting transcript for SDNX-d-jduM
+[2026-03-05 10:42:33] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-05 10:42:33] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-05 10:42:33] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-05 10:42:34] Success with instance list()
+[2026-03-05 10:43:09] Starting Agent B for PM...
+[2026-03-05 10:43:09] Found video ID: SDNX-d-jduM | Title: 2622개 종목이 하락했던 아수라장 [3월4일 #퇴근요정] (Attempt 1)
+[2026-03-05 10:43:09] Attempting transcript for SDNX-d-jduM
+[2026-03-05 10:43:09] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-05 10:43:09] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-05 10:43:09] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-05 10:43:11] Success with instance list()
+[2026-03-05 10:43:27] Report saved to output\reports\20260305_PM_분석보고서.md
+[2026-03-05 10:44:22] Starting Agent B for PM...
+[2026-03-05 10:44:23] Found video ID: SDNX-d-jduM | Title: 2622개 종목이 하락했던 아수라장 [3월4일 #퇴근요정] (Attempt 1)
+[2026-03-05 10:44:23] Attempting transcript for SDNX-d-jduM
+[2026-03-05 10:44:23] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-05 10:44:23] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-05 10:44:23] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-05 10:44:24] Success with instance list()
+[2026-03-05 10:44:41] Report saved to output\reports\20260305_PM_분석보고서.md
+[2026-03-05 10:45:23] Starting Agent B for PM...
+[2026-03-05 10:45:24] Found video ID: SDNX-d-jduM | Title: 2622개 종목이 하락했던 아수라장 [3월4일 #퇴근요정] (Attempt 1)
+[2026-03-05 10:45:24] Attempting transcript for SDNX-d-jduM
+[2026-03-05 10:45:24] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-05 10:45:24] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-05 10:45:24] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-05 10:45:25] Success with instance list()
+[2026-03-05 10:45:46] Report saved to output\reports\20260305_PM_분석보고서.md
+[2026-03-05 10:48:48] Starting Agent B for PM...
+[2026-03-05 10:48:48] Found video ID: SDNX-d-jduM | Title: 2622개 종목이 하락했던 아수라장 [3월4일 #퇴근요정] (Attempt 1)
+[2026-03-05 10:48:48] Attempting transcript for SDNX-d-jduM
+[2026-03-05 10:48:48] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-05 10:48:48] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-05 10:48:48] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-05 10:48:49] Success with instance list()
+[2026-03-05 10:49:55] Starting Agent B for AM...
+[2026-03-05 10:49:56] Matched today's video: 한국경제신문 30분 만에 읽기 | 20260305🌞#모닝루틴 | 아침 8시 라이브 (4aeXbThlacM)
+[2026-03-05 10:49:56] Found video ID: 4aeXbThlacM | Title: 한국경제신문 30분 만에 읽기 | 20260305🌞#모닝루틴 | 아침 8시 라이브 (Attempt 1)
+[2026-03-05 10:49:56] Attempting transcript for 4aeXbThlacM
+[2026-03-05 10:49:56] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-05 10:49:56] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-05 10:49:56] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-05 10:49:58] Success with instance list()
+[2026-03-05 10:50:55] Starting Agent B for AM...
+[2026-03-05 10:50:56] Matched today's video: 한국경제신문 30분 만에 읽기 | 20260305🌞#모닝루틴 | 아침 8시 라이브 (4aeXbThlacM)
+[2026-03-05 10:50:56] Found video ID: 4aeXbThlacM | Title: 한국경제신문 30분 만에 읽기 | 20260305🌞#모닝루틴 | 아침 8시 라이브 (Attempt 1)
+[2026-03-05 10:50:56] Attempting transcript for 4aeXbThlacM
+[2026-03-05 10:50:56] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-05 10:50:56] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-05 10:50:56] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-05 10:50:57] Success with instance list()
+[2026-03-05 10:51:27] Starting Agent B for AM...
+[2026-03-05 10:51:28] Matched today's video: 한국경제신문 30분 만에 읽기 | 20260305🌞#모닝루틴 | 아침 8시 라이브 (4aeXbThlacM)
+[2026-03-05 10:51:28] Found video ID: 4aeXbThlacM | Title: 한국경제신문 30분 만에 읽기 | 20260305🌞#모닝루틴 | 아침 8시 라이브 (Attempt 1)
+[2026-03-05 10:51:28] Attempting transcript for 4aeXbThlacM
+[2026-03-05 10:51:28] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-05 10:51:28] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-05 10:51:28] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-05 10:51:29] Success with instance list()
+[2026-03-05 10:51:41] Error during Gemini analysis: 
+  No API_KEY or ADC found. Please either:
+    - Set the `GOOGLE_API_KEY` environment variable.
+    - Manually pass the key with `genai.configure(api_key=my_api_key)`.
+    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.
+[2026-03-05 10:51:41] Waiting 30 seconds before retry...
+[2026-03-05 10:52:12] Matched today's video: 한국경제신문 30분 만에 읽기 | 20260305🌞#모닝루틴 | 아침 8시 라이브 (4aeXbThlacM)
+[2026-03-05 10:52:12] Found video ID: 4aeXbThlacM | Title: 한국경제신문 30분 만에 읽기 | 20260305🌞#모닝루틴 | 아침 8시 라이브 (Attempt 2)
+[2026-03-05 10:52:12] Attempting transcript for 4aeXbThlacM
+[2026-03-05 10:52:12] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-05 10:52:12] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-05 10:52:12] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-05 10:52:13] Success with instance list()
+[2026-03-05 10:52:25] Error during Gemini analysis: 
+  No API_KEY or ADC found. Please either:
+    - Set the `GOOGLE_API_KEY` environment variable.
+    - Manually pass the key with `genai.configure(api_key=my_api_key)`.
+    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.
+[2026-03-05 10:52:25] Waiting 30 seconds before retry...
+[2026-03-05 10:52:56] Matched today's video: 한국경제신문 30분 만에 읽기 | 20260305🌞#모닝루틴 | 아침 8시 라이브 (4aeXbThlacM)
+[2026-03-05 10:52:56] Found video ID: 4aeXbThlacM | Title: 한국경제신문 30분 만에 읽기 | 20260305🌞#모닝루틴 | 아침 8시 라이브 (Attempt 3)
+[2026-03-05 10:52:56] Attempting transcript for 4aeXbThlacM
+[2026-03-05 10:52:56] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-05 10:52:56] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-05 10:52:56] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-05 10:52:57] Success with instance list()
+[2026-03-05 10:53:23] Starting Agent B for AM...
+[2026-03-05 10:53:24] Matched today's video: 한국경제신문 30분 만에 읽기 | 20260305🌞#모닝루틴 | 아침 8시 라이브 (4aeXbThlacM)
+[2026-03-05 10:53:24] Found video ID: 4aeXbThlacM | Title: 한국경제신문 30분 만에 읽기 | 20260305🌞#모닝루틴 | 아침 8시 라이브 (Attempt 1)
+[2026-03-05 10:53:24] Attempting transcript for 4aeXbThlacM
+[2026-03-05 10:53:24] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-05 10:53:24] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-05 10:53:24] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-05 10:53:25] Success with instance list()
+[2026-03-05 10:53:54] Report saved to output\reports\20260305_AM_분석보고서.md
+[2026-03-05 18:05:54] Starting Agent B for PM...
+[2026-03-05 18:05:55] Found video ID: 5jNIobMPY7I | Title: 전체 종목 96%가 상승했던 급등장 [3월5일 #퇴근요정] (Attempt 1)
+[2026-03-05 18:05:55] Attempting transcript for 5jNIobMPY7I
+[2026-03-05 18:05:55] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-05 18:05:55] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-05 18:05:55] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-05 18:05:56] Instance list() failed: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=5jNIobMPY7I! This is most likely caused by:
+
+Subtitles are disabled for this video
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+[2026-03-05 18:05:56] Error fetching transcript for 5jNIobMPY7I: All list methods failed
+[2026-03-05 18:05:56] Failed to extract transcript for 5jNIobMPY7I.
+[2026-03-05 18:05:56] Waiting 30 seconds before retry...
+[2026-03-05 18:06:27] Found video ID: 5jNIobMPY7I | Title: 전체 종목 96%가 상승했던 급등장 [3월5일 #퇴근요정] (Attempt 2)
+[2026-03-05 18:06:27] Attempting transcript for 5jNIobMPY7I
+[2026-03-05 18:06:27] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-05 18:06:27] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-05 18:06:27] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-05 18:06:29] Instance list() failed: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=5jNIobMPY7I! This is most likely caused by:
+
+Subtitles are disabled for this video
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+[2026-03-05 18:06:29] Error fetching transcript for 5jNIobMPY7I: All list methods failed
+[2026-03-05 18:06:29] Failed to extract transcript for 5jNIobMPY7I.
+[2026-03-05 18:06:29] Waiting 30 seconds before retry...
+[2026-03-05 18:07:00] Found video ID: 5jNIobMPY7I | Title: 전체 종목 96%가 상승했던 급등장 [3월5일 #퇴근요정] (Attempt 3)
+[2026-03-05 18:07:00] Attempting transcript for 5jNIobMPY7I
+[2026-03-05 18:07:00] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-05 18:07:00] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-05 18:07:00] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-05 18:07:01] Instance list() failed: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=5jNIobMPY7I! This is most likely caused by:
+
+Subtitles are disabled for this video
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+[2026-03-05 18:07:01] Error fetching transcript for 5jNIobMPY7I: All list methods failed
+[2026-03-05 18:07:01] Failed to extract transcript for 5jNIobMPY7I.
+[2026-03-05 18:07:01] 당일 [PM] 업데이트 없음
+[2026-03-05 18:12:43] Starting Agent B for PM...
+[2026-03-05 18:12:44] Matched today's video: 전체 종목 96%가 상승했던 급등장 [3월5일 #퇴근요정] (5jNIobMPY7I)
+[2026-03-05 18:12:44] Found video ID: 5jNIobMPY7I | Title: 전체 종목 96%가 상승했던 급등장 [3월5일 #퇴근요정] (Attempt 1)
+[2026-03-05 18:12:44] Attempting transcript for 5jNIobMPY7I
+[2026-03-05 18:12:44] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-05 18:12:44] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-05 18:12:44] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-05 18:12:46] Instance list() failed: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=5jNIobMPY7I! This is most likely caused by:
+
+Subtitles are disabled for this video
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+[2026-03-05 18:12:46] Falling back to video description for 5jNIobMPY7I
+[2026-03-05 18:12:47] Successfully retrieved video description as fallback.
+[2026-03-05 18:13:03] Report saved to output\reports\20260305_PM_분석보고서.md
+[2026-03-05 19:50:34] Starting Agent B for PM...
+[2026-03-05 19:50:35] Matched today's video: 전체 종목 96%가 상승했던 급등장 [3월5일 #퇴근요정] (5jNIobMPY7I)
+[2026-03-05 19:50:35] Found video ID: 5jNIobMPY7I | Title: 전체 종목 96%가 상승했던 급등장 [3월5일 #퇴근요정] (Attempt 1)
+[2026-03-05 19:50:35] Attempting transcript for 5jNIobMPY7I
+[2026-03-05 19:50:35] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-05 19:50:35] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-05 19:50:35] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-05 19:50:37] Success with instance list()
+[2026-03-05 19:51:01] Report saved to output\reports\20260305_PM_분석보고서.md
+[2026-03-06 10:35:44] Starting Agent B for AM...
+[2026-03-06 10:35:45] Matched today's video: 한국경제신문 30분 만에 읽기 | 20260306🌞#모닝루틴 | 아침 8시 라이브 (UccFS5CX_b8)
+[2026-03-06 10:35:45] Found video ID: UccFS5CX_b8 | Title: 한국경제신문 30분 만에 읽기 | 20260306🌞#모닝루틴 | 아침 8시 라이브 (Attempt 1)
+[2026-03-06 10:35:45] Attempting transcript for UccFS5CX_b8
+[2026-03-06 10:35:45] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-06 10:35:45] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-06 10:35:45] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-06 10:35:46] Success with instance list()
+[2026-03-06 10:36:06] Report saved to output\reports\20260306_AM_분석보고서.md

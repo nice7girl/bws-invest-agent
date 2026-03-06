@@ -14,12 +14,6 @@ import io
 import json
 import os
 from datetime import datetime
-import agent_b
-import agent_w
-import agent_s
-
-# Removed manual sys.stdout/stderr wrapping
-
 
 def load_config():
     if os.path.exists("config.json"):
@@ -29,6 +23,13 @@ def load_config():
                 os.environ[key] = value
     else:
         print("Warning: config.json not found. Using environment variables.")
+
+# Load config BEFORE importing agents that use environment variables at module level
+load_config()
+
+import agent_b
+import agent_w
+import agent_s
 
 
 import requests
@@ -92,8 +93,6 @@ def run_pipeline(timeframe: str, skip_agent_s: bool = False, force: bool = False
 
 
 if __name__ == "__main__":
-    load_config()
-    
     import argparse
     parser = argparse.ArgumentParser(description="BWS Invest Agent Pipeline")
     parser.add_argument("mode", nargs="?", default="AM", choices=["AM", "PM"],
