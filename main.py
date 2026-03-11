@@ -54,7 +54,7 @@ def check_server_completed(timeframe: str) -> bool:
     return False
 
 
-def run_pipeline(timeframe: str, skip_agent_s: bool = False, force: bool = False):
+def run_pipeline(timeframe: str, skip_agent_b: bool = False, skip_agent_s: bool = False, force: bool = False):
     print(f"\n{'='*50}")
     print(f"[START] BWS Invest Pipeline [{timeframe}] - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"{'='*50}\n")
@@ -68,8 +68,13 @@ def run_pipeline(timeframe: str, skip_agent_s: bool = False, force: bool = False
     """
 
     # 1. Agent B: YouTube 분석 및 보고서 생성
-    print("[Agent B] YouTube 분석 시작...")
-    success = agent_b.run_agent_b(timeframe)
+    if skip_agent_b:
+        print("\n[Agent B] --skip-agent-b 옵션으로 건너뜁니다.")
+        success = True
+    else:
+        print("[Agent B] YouTube 분석 시작...")
+        success = agent_b.run_agent_b(timeframe)
+        
     if not success:
         print(f"[Agent B] {timeframe} 분석 실패 또는 새 영상 없음. 파이프라인 중단.")
         return
@@ -98,11 +103,13 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="BWS Invest Agent Pipeline")
     parser.add_argument("mode", nargs="?", default="AM", choices=["AM", "PM"],
                         help="실행 모드 (AM 또는 PM)")
+    parser.add_argument("--skip-agent-b", action="store_true",
+                        help="Agent B(YouTube 분석) 건너뜀")
     parser.add_argument("--skip-agent-s", action="store_true",
                         help="Agent S(NotebookLM) 건너뜀")
     parser.add_argument("--force", action="store_true",
                         help="서버 완료 여부와 관계없이 강제 실행")
     args = parser.parse_args()
     
-    run_pipeline(args.mode, skip_agent_s=args.skip_agent_s, force=args.force)
+    run_pipeline(args.mode, skip_agent_b=args.skip_agent_b, skip_agent_s=args.skip_agent_s, force=args.force)
 
