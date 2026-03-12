@@ -952,3 +952,122 @@ If you are sure that the described cause is not responsible for this error and t
 [2026-03-11 09:29:27] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
 [2026-03-11 09:29:28] Success with instance list()
 [2026-03-11 09:29:52] Report saved to output\reports\20260311_AM_분석보고서.md
+[2026-03-11 11:04:45] Starting Agent B for AM...
+[2026-03-11 11:04:46] Matched today's video: 한국경제신문 30분 만에 읽기 | 20260311🌞#모닝루틴 | 아침 8시 라이브 (WgPKXbFSHqY)
+[2026-03-11 11:04:46] Found video ID: WgPKXbFSHqY | Title: 한국경제신문 30분 만에 읽기 | 20260311🌞#모닝루틴 | 아침 8시 라이브 (Attempt 1)
+[2026-03-11 11:04:46] Attempting transcript for WgPKXbFSHqY
+[2026-03-11 11:04:46] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-11 11:04:46] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-11 11:04:46] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-11 11:04:48] Success with instance list()
+[2026-03-11 11:05:09] Report saved to output\reports\20260311_AM_분석보고서.md
+[2026-03-11 18:25:24] Starting Agent B for PM...
+[2026-03-11 18:25:25] Matched today's video: 오늘도 롤러코스터, 외국인·개인 팔자 [3월11일 #퇴근요정] (7pxnKA6VgtM)
+[2026-03-11 18:25:25] Found video ID: 7pxnKA6VgtM | Title: 오늘도 롤러코스터, 외국인·개인 팔자 [3월11일 #퇴근요정] (Attempt 1)
+[2026-03-11 18:25:25] Attempting transcript for 7pxnKA6VgtM
+[2026-03-11 18:25:25] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-11 18:25:25] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-11 18:25:25] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-11 18:25:27] Success with instance list()
+[2026-03-11 18:25:28] Transcript API failed for 7pxnKA6VgtM: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=7pxnKA6VgtM! This is most likely caused by:
+
+YouTube is blocking requests from your IP. This usually is due to one of the following reasons:
+- You have done too many requests and your IP has been blocked by YouTube
+- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.
+
+Ways to work around this are explained in the "Working around IP bans" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around-ip-bans-requestblocked-or-ipblocked-exception).
+
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+[2026-03-11 18:25:28] Falling back to video description for 7pxnKA6VgtM
+[2026-03-11 18:25:29] Successfully retrieved video description as fallback.
+[2026-03-11 18:25:42] Report saved to output\reports\20260311_PM_분석보고서.md
+[2026-03-11 18:26:00] Starting Agent B for PM...
+[2026-03-11 18:26:01] Matched today's video: 오늘도 롤러코스터, 외국인·개인 팔자 [3월11일 #퇴근요정] (7pxnKA6VgtM)
+[2026-03-11 18:26:01] Found video ID: 7pxnKA6VgtM | Title: 오늘도 롤러코스터, 외국인·개인 팔자 [3월11일 #퇴근요정] (Attempt 1)
+[2026-03-11 18:26:01] Attempting transcript for 7pxnKA6VgtM
+[2026-03-11 18:26:01] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-11 18:26:01] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-11 18:26:01] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-11 18:26:03] Success with instance list()
+[2026-03-11 18:26:03] Transcript API failed for 7pxnKA6VgtM: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=7pxnKA6VgtM! This is most likely caused by:
+
+YouTube is blocking requests from your IP. This usually is due to one of the following reasons:
+- You have done too many requests and your IP has been blocked by YouTube
+- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.
+
+Ways to work around this are explained in the "Working around IP bans" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around-ip-bans-requestblocked-or-ipblocked-exception).
+
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+[2026-03-11 18:26:03] Falling back to video description for 7pxnKA6VgtM
+[2026-03-11 18:26:05] Successfully retrieved video description as fallback.
+[2026-03-11 18:26:22] Report saved to output\reports\20260311_PM_분석보고서.md
+[2026-03-11 18:32:33] Starting Agent B for PM...
+[2026-03-11 18:32:34] Matched today's video: 오늘도 롤러코스터, 외국인·개인 팔자 [3월11일 #퇴근요정] (7pxnKA6VgtM)
+[2026-03-11 18:32:34] Found video ID: 7pxnKA6VgtM | Title: 오늘도 롤러코스터, 외국인·개인 팔자 [3월11일 #퇴근요정] (Attempt 1)
+[2026-03-11 18:32:34] Attempting transcript for 7pxnKA6VgtM
+[2026-03-11 18:32:34] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-11 18:32:34] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-11 18:32:34] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-11 18:32:35] Success with instance list()
+[2026-03-11 18:32:36] Transcript API failed for 7pxnKA6VgtM: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=7pxnKA6VgtM! This is most likely caused by:
+
+YouTube is blocking requests from your IP. This usually is due to one of the following reasons:
+- You have done too many requests and your IP has been blocked by YouTube
+- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.
+
+Ways to work around this are explained in the "Working around IP bans" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around-ip-bans-requestblocked-or-ipblocked-exception).
+
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+[2026-03-11 18:32:36] Falling back to video description for 7pxnKA6VgtM
+[2026-03-11 18:32:37] Successfully retrieved video description as fallback.
+[2026-03-11 18:36:46] Report saved to output\reports\20260311_PM_분석보고서.md
+[2026-03-11 18:42:16] Starting Agent B for PM...
+[2026-03-11 18:42:17] Matched today's video: 오늘도 롤러코스터, 외국인·개인 팔자 [3월11일 #퇴근요정] (7pxnKA6VgtM)
+[2026-03-11 18:42:17] Found video ID: 7pxnKA6VgtM | Title: 오늘도 롤러코스터, 외국인·개인 팔자 [3월11일 #퇴근요정] (Attempt 1)
+[2026-03-11 18:42:17] Attempting transcript for 7pxnKA6VgtM
+[2026-03-11 18:42:17] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-11 18:42:17] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-11 18:42:17] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-11 18:42:19] Success with instance list()
+[2026-03-11 18:42:20] Transcript API failed for 7pxnKA6VgtM: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=7pxnKA6VgtM! This is most likely caused by:
+
+YouTube is blocking requests from your IP. This usually is due to one of the following reasons:
+- You have done too many requests and your IP has been blocked by YouTube
+- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.
+
+Ways to work around this are explained in the "Working around IP bans" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around-ip-bans-requestblocked-or-ipblocked-exception).
+
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+[2026-03-11 18:42:20] Falling back to video description for 7pxnKA6VgtM
+[2026-03-11 18:42:21] Successfully retrieved video description as fallback.
+[2026-03-11 18:42:35] Report saved to output\reports\20260311_PM_분석보고서.md
+[2026-03-12 09:29:27] Starting Agent B for AM...
+[2026-03-12 09:29:29] Matched today's video: 한국경제신문 30분 만에 읽기 | 20260312🌞#모닝루틴 | 아침 8시 라이브 (iEKaL_a_1KM)
+[2026-03-12 09:29:29] Found video ID: iEKaL_a_1KM | Title: 한국경제신문 30분 만에 읽기 | 20260312🌞#모닝루틴 | 아침 8시 라이브 (Attempt 1)
+[2026-03-12 09:29:29] Attempting transcript for iEKaL_a_1KM
+[2026-03-12 09:29:29] Trying YouTubeTranscriptApi.list(video_id)...
+[2026-03-12 09:29:29] YouTubeTranscriptApi.list() failed: YouTubeTranscriptApi.list() missing 1 required positional argument: 'video_id'
+[2026-03-12 09:29:29] Trying api = YouTubeTranscriptApi(); api.list(video_id)...
+[2026-03-12 09:29:30] Success with instance list()
+[2026-03-12 09:29:30] Transcript API failed for iEKaL_a_1KM: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=iEKaL_a_1KM! This is most likely caused by:
+
+YouTube is blocking requests from your IP. This usually is due to one of the following reasons:
+- You have done too many requests and your IP has been blocked by YouTube
+- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.
+
+Ways to work around this are explained in the "Working around IP bans" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around-ip-bans-requestblocked-or-ipblocked-exception).
+
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+[2026-03-12 09:29:30] Falling back to video description for iEKaL_a_1KM
+[2026-03-12 09:29:32] Successfully retrieved video description as fallback.
+[2026-03-12 09:29:46] Report saved to output\reports\20260312_AM_분석보고서.md
