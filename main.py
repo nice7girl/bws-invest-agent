@@ -54,7 +54,7 @@ def check_server_completed(timeframe: str) -> bool:
     return False
 
 
-def run_pipeline(timeframe: str, skip_agent_b: bool = False, skip_agent_s: bool = False, force: bool = False):
+def run_pipeline(timeframe: str, skip_agent_b: bool = False, skip_agent_s: bool = False, force: bool = False, use_description: bool = False):
     print(f"\n{'='*50}")
     print(f"[START] BWS Invest Pipeline [{timeframe}] - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"{'='*50}\n")
@@ -73,10 +73,10 @@ def run_pipeline(timeframe: str, skip_agent_b: bool = False, skip_agent_s: bool 
         success = True
     else:
         print("[Agent B] YouTube 분석 시작...")
-        success = agent_b.run_agent_b(timeframe)
+        success = agent_b.run_agent_b(timeframe, use_description=use_description)
         
     if not success:
-        print(f"[Agent B] {timeframe} 분석 실패 또는 새 영상 없음. 파이프라인 중단.")
+        print(f"[Agent B] {timeframe} 분석 실패(자막 없음) 또는 새 영상 없음. 파이프라인 중단.")
         return
 
     # 2. Agent W: 텔레그램 전송
@@ -109,7 +109,10 @@ if __name__ == "__main__":
                         help="Agent S(NotebookLM) 건너뜀")
     parser.add_argument("--force", action="store_true",
                         help="서버 완료 여부와 관계없이 강제 실행")
+    parser.add_argument("--use-description", action="store_true",
+                        help="자막 부재 시 영상 설명(Description)을 대신 사용")
     args = parser.parse_args()
     
-    run_pipeline(args.mode, skip_agent_b=args.skip_agent_b, skip_agent_s=args.skip_agent_s, force=args.force)
+    run_pipeline(args.mode, skip_agent_b=args.skip_agent_b, skip_agent_s=args.skip_agent_s, 
+                 force=args.force, use_description=args.use_description)
 

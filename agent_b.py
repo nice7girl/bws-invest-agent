@@ -105,7 +105,7 @@ def get_latest_video_id(playlist_url, timeframe):
         log(f"Error fetching playlist: {e}")
     return None, None
 
-def get_transcript(video_id):
+def get_transcript(video_id, use_description=False):
     try:
         from youtube_transcript_api import YouTubeTranscriptApi
         log(f"Attempting transcript for {video_id}")
@@ -157,21 +157,20 @@ def get_transcript(video_id):
     except Exception as e:
         log(f"Transcript API failed for {video_id}: {e}")
         
-    # Fallback to description if transcript is unavailable
-    try:
-        log(f"Falling back to video description for {video_id}")
-        url = f"https://www.youtube.com/watch?v={video_id}"
-        response = requests.get(url, timeout=10)
-        if response.status_code == 200:
-            # Extract description from meta tags or script
-            meta_match = re.search(r'"shortDescription":"(.*?)"', response.text)
-            if meta_match:
-                # Clean up escaped newlines and unicode
-                desc = meta_match.group(1).replace("\\n", "\n")
-                log("Successfully retrieved video description as fallback.")
-                return f"[VIDEO DESCRIPTION FALLBACK]\n{desc}"
-    except Exception as e:
-        log(f"Description fallback failed: {e}")
+    # Manual fallback to description ONLY if explicitly requested
+    if use_description:
+        try:
+            log(f"Falling back to video description for {video_id} (requested)")
+            url = f"https://www.youtube.com/watch?v={video_id}"
+            response = requests.get(url, timeout=10)
+            if response.status_code == 200:
+                meta_match = re.search(r'"shortDescription":"(.*?)"', response.text)
+                if meta_match:
+                    desc = meta_match.group(1).replace("\\n", "\n")
+                    log("Successfully retrieved video description as fallback.")
+                    return f"[VIDEO DESCRIPTION FALLBACK]\n{desc}"
+        except Exception as e:
+            log(f"Description fallback failed: {e}")
         
     return None
 
@@ -273,7 +272,7 @@ def analyze_report(transcript, timeframe):
         log(f"Error during Gemini analysis: {e}")
         return None
 
-def run_agent_b(timeframe):
+def run_agent_b(timeframe, use_description=False):
     log(f"Starting Agent B for {timeframe}...")
     os.makedirs(OUTPUT_DIR, exist_ok=True)  # output/reports 자동 생성
     playlist_url = PLAYLISTS.get(timeframe)
@@ -282,7 +281,7 @@ def run_agent_b(timeframe):
         video_id, title = get_latest_video_id(playlist_url, timeframe)
         if video_id:
             log(f"Found video ID: {video_id} | Title: {title} (Attempt {attempt})")
-            transcript = get_transcript(video_id)
+            transcript = get_transcript(video_id, use_description=use_description)
             if transcript:
                 report = analyze_report(transcript, timeframe)
                 if report:
@@ -310,4 +309,5 @@ def run_agent_b(timeframe):
 if __name__ == "__main__":
     import sys
     mode = sys.argv[1] if len(sys.argv) > 1 else "AM"
-    run_agent_b(mode)
+    # Standalone execution defaults to transcript-only
+    run_agent_b(mode, use_description=False)
